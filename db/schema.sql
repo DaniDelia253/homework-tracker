@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS homework_db;
+
+CREATE DATABASE homework_db;
