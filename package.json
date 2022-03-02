@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/DaniDelia253/homework-tracker#readme",
   "dependencies": {
+    "are-we-there-yet": "^3.0.0",
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.2",
     "dotenv": "^16.0.0",
