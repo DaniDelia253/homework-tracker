@@ -20,6 +20,10 @@ Homework.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
+        due_date: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
         user_id: {
             type: DataTypes.INTEGER,
             references: {
