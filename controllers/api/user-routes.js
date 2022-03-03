@@ -63,13 +63,13 @@ router.post('/', (req, res) => {
 router.post('/login', (req, res) => {
     User.findOne({
       where: {
-        username: req.body.username
+        username: req.body.email
       }
     })
     .then(dbUserData => {
       //verify user
       if(!dbUserData) {
-        res.status(400).json({ message: 'Username not Found' });
+        res.status(400).json({ message: 'Email not Found' });
         return;
       }
       const validPassword = dbUserData.checkPassword(req.body.password);
