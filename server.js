@@ -5,6 +5,7 @@ const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const exphbs = require('express-handlebars');
 const hbs = exphbs.create({});
+const path = require('path')
 
 
 require('dotenv').config();
@@ -23,7 +24,8 @@ const sess = {
   })
 };
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.join(__dirname, '/public')));
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
