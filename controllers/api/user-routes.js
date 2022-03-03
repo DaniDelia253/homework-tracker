@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
         },
         include: {
           model: Homework,
-          attributes: ['id', 'title', 'homework_text']
+          attributes: ['id', 'title', 'due_date', 'homework_text']
         }
     })
         .then(dbUserData => {
@@ -30,7 +30,7 @@ router.get('/:id', (req, res) => {
         },
         include: {
           model: Homework,
-          attributes: ['id', 'title', 'homework_text']
+          attributes: ['id', 'title', 'due_date', 'homework_text']
         }
     })
         .then(dbUserData => {
