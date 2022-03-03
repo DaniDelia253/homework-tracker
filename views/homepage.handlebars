@@ -1,15 +1,10 @@
 {{!-- MAKE A CARD FOR EACH HOMEWORK FROM THE DATABASE --}}
-<div class="card text-center p-0 m-5">
-    <div class="card-header transform" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false"
-        aria-controls="collapseExample">
-        Homework Assignment
-        <br>
-        Due Date:
-    </div>
-    <div class="card-body collapse" id="collapseExample">
-        <p class="card-text">blah blah blah</p>
-        <div class="card-footer text-muted">
-            <p id="markCompleteBtn"><i class="fas fa-check"></i>mark complete</p>
-        </div>
-    </div>
-</div>
+<ol class="homework-list">
+    {{!-- figure out what this is going to be called --}}
+    {{#each homework}}
+    <li>
+        {{!-- figure out what this is called --}}
+        {{>homework homework}}
+    </li>
+    {{/each}}
+</ol>
