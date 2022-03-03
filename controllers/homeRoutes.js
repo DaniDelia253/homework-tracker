@@ -17,7 +17,19 @@ router.get('/', (req, res) => {
                 attributes: ["id", "title", "homework_text", "user_id"]
             }
         ]
-    }).then((dbUserData) => {
-        console.log(dbUserData)
-    }).catch(console.log(err))
+    })
+        .then((dbUserData) => {
+            console.log(dbUserData)
+            const user = dbUserData.map((user) => user.get({ plain: true }));
+            res.render('homepage', {
+                user,
+                loggedIn: req.session.loggedIn
+            })
+        })
+        .catch((err) => {
+            console.log(err);
+            res.status(500).json(err)
+        })
 })
+
+module.exports = router;
