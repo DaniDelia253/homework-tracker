@@ -45,3 +45,7 @@ body {
   color: black;
   font-weight: bold;
 }
+
+.form {
+  border: rgb(92, 92, 92);
+}
