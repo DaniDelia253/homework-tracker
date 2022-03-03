@@ -42,6 +42,7 @@ router.post('/', (req, res) => {
     Homework.create({
             title: req.body.title,
             homework_text: req.body.homework_text,
+            due_date: req.body.due_date,
             user_id: req.body.user_id
     })
         .then(dbHomeworkData => res.json(dbHomeworkData))
