@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
         include: [
             {
                 model: Homework,
-                attributes: ["id", "title", "homework_text", "user_id"]
+                attributes: ["id", "title", "homework_text", "due_date", "user_id"]
             }
         ]
     })
