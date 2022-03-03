@@ -8,7 +8,27 @@ User.hasMany(Homework, {
 });
 
 Homework.belongsTo(User, {
-    foreignKey: 'user_id'
+    foreignKey: 'user_id',
+    onDelete: 'SET NULL'
+});
+
+Task.belongsTo(User, {
+    foreignKey: 'user_id',
+    onDelete: 'SET NULL'
+});
+
+Task.belongsTo(Homework, {
+    foreignKey: 'homework_id',
+    onDelete: 'SET NULL'
+});
+
+User.hasMany(Task, {
+    foreignKey: 'user_id',
+    onDelete: 'SET NULL'
+});
+
+Homework.hasMany(Task, {
+    foreignKey: 'homework_id'
 });
 
 module.exports = { User, Homework, Task };
