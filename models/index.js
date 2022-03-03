@@ -1,5 +1,6 @@
 const User = require('./User');
 const Homework = require('./Homework');
+const Task = require('./Task');
 
 // Create Associations
 User.hasMany(Homework, {
@@ -10,4 +11,4 @@ Homework.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
-module.exports = { User, Homework };
+module.exports = { User, Homework, Task };
