@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
         },
         include: {
           model: Homework,
-          attributes: ['id', 'title', 'homework_text']
+          attributes: ['id', 'title', 'due_date', 'homework_text']
         }
     })
         .then(dbUserData => {
@@ -30,7 +30,7 @@ router.get('/:id', (req, res) => {
         },
         include: {
           model: Homework,
-          attributes: ['id', 'title', 'homework_text']
+          attributes: ['id', 'title', 'due_date', 'homework_text']
         }
     })
         .then(dbUserData => {
@@ -72,7 +72,7 @@ router.post('/', (req, res) => {
 router.post('/login', (req, res) => {
     User.findOne({
         where: {
-            username: req.body.email
+            email: req.body.email
         }
     })
         .then(dbUserData => {
@@ -92,6 +92,10 @@ router.post('/login', (req, res) => {
                 req.session.loggedIn = true;
                 res.json({user: dbUserData, message: 'You are now logged in!' });
             });
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
         });
 });
 
