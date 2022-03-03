@@ -6,7 +6,19 @@
         Due Date:
     </div>
     <div class="card-body collapse" id="collapseExample">
-        <p class="card-text">blah blah blah</p>
+        <p class="card-text">
+            {{!-- HOMEWORK TEXT --}}
+            {{!-- CHECKLIST OF TASKS --}}
+        <ul class="task-list">
+            {{!-- figure out what this is going to be called --}}
+            {{#each task}}
+            <li>
+                {{!-- figure out what this is called --}}
+                {{>task task}}
+            </li>
+            {{/each}}
+        </ul>
+        </p>
         <div class="card-footer text-muted">
             <p id="markCompleteBtn"><i class="fas fa-check"></i>mark complete</p>
         </div>
