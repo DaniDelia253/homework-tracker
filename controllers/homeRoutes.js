@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { User, Homework } = require('../models');
 
 router.get('/', (req, res) => {
-    console.log(req.session);
+    console.log("+++++++++++++" + req.session + "++++++++++++++++++++++");
 
     User.findAll({
         attributes: [
@@ -21,6 +21,7 @@ router.get('/', (req, res) => {
         .then((dbUserData) => {
             console.log(dbUserData)
             const user = dbUserData.map((user) => user.get({ plain: true }));
+            console.log("=============" + user + "================")
             res.render('homepage', {
                 user,
                 loggedIn: req.session.loggedIn

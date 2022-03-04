@@ -18,7 +18,7 @@
     {{!-- IF USER IS LOGGED IN, SHOW NAV --}}
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" id="nav-brand-text" href="#">Hi, Name!</a>
+            <a class="navbar-brand" id="nav-brand-text" href="#">Hi, {{username}}!</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -50,8 +50,10 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/js-datepicker"></script>
+    <script src="javascript/login.js"></script>
     <script src="javascript/logout.js"></script>
-    <script src="javascript/add-homework.js"></script>
+    {{!--
+    <script src="javascript/add-homework.js"></script> --}}
 </body>
 
 </html>
