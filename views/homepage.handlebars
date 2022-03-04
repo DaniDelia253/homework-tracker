@@ -1,9 +1,6 @@
-{{!-- MAKE A CARD FOR EACH HOMEWORK FROM THE DATABASE --}}
 <ul class="homework-list">
-    {{!-- figure out what this is going to be called --}}
-    {{#each homework}}
+    {{#each thisUser.homework as |homework|}}
     <li>
-        {{!-- figure out what this is called --}}
         {{>homework homework}}
     </li>
     {{/each}}

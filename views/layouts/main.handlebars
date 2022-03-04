@@ -15,10 +15,10 @@
 
 <body>
     <h1 class="container-fluid appHeader text-center m-0">Homework Tracker</h1>
-    {{!-- IF USER IS LOGGED IN, SHOW NAV --}}
+    {{#if loggedIn}}
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" id="nav-brand-text" href="#">Hi, {{username}}!</a>
+            <a class="navbar-brand" id="nav-brand-text" href="#">Hi, {{thisUser.username}}!</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -37,6 +37,7 @@
             </div>
         </div>
     </nav>
+    {{/if}}
 
     <main>
         {{{ body }}}

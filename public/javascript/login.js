@@ -33,8 +33,8 @@ async function signupFormHandler(event) {
     const response = await fetch('/api/user', {
       method: 'post',
       body: JSON.stringify({
-        username,
         email,
+        username,
         password
       }),
       headers: { 'Content-Type': 'application/json' }
@@ -42,6 +42,7 @@ async function signupFormHandler(event) {
 
     if (response.ok) {
       console.log("success!");
+      document.location.replace('/');
     } else {
       alert(response.statusText);
     }
