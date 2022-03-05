@@ -42,11 +42,27 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="homeworkModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="homeworkModalLabel">New homework assignment:</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <form class=" p-2 form newHomework-form text-center">
+                        <div class="">
+                            <label class="" for="homeworkTitle">Title:</label>
+                            <br>
+                            <input class="mb-4" type="text" id="homeworkTitle" />
+                        </div>
+                        <div class="">
+                            <label class="" for="homeworkText">Description:</label>
+                            <br>
+                            <textarea rows="4" cols="30" class="mb-4" type="text" id="homeworkText"></textarea>
+                        </div>
+                        <div class="">
+                            <label class="" for="dueDate">Due Date:</label>
+                            <br>
+                            <input class="mb-4" type="text" id="dueDate" />
+                        </div>
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary">Save</button>
@@ -71,6 +87,7 @@
     <script src="https://unpkg.com/js-datepicker"></script>
     <script src="javascript/login.js"></script>
     <script src="javascript/logout.js"></script>
+    <script src="javascript/datepicker.js"></script>
     {{!--
     <script src="javascript/add-homework.js"></script> --}}
 </body>
