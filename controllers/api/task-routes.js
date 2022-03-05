@@ -1,7 +1,8 @@
 const router = require('express').Router();
 const { Homework, Task } = require('../../models');
+const withAuth = require('../../utils/auth');
 
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
     Task.findAll()
         .then(dbTaskData => res.json(dbTaskData))
         .catch(err => {
@@ -10,7 +11,7 @@ router.get('/', (req, res) => {
         });
 });
 
-router.get('/:id', (req, res) => {
+router.get('/:id', withAuth, (req, res) => {
     Task.findOne({
         where: {
             id: req.params.id
@@ -29,26 +30,7 @@ router.get('/:id', (req, res) => {
             });
 });
 
-router.get('/:id', (req, res) => {
-    Task.findOne({
-        where: {
-            id: req.params.id
-        }
-    })
-        .then(dbTaskData => {
-            if (!dbTaskData) {
-                res.status(404).json(dbTaskData);
-                return;
-            }
-            res.json(dbTaskData);
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
-});
-
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
     Task.create({
         task_text: req.body.task_text,
         user_id: req.body.user_id,
@@ -61,7 +43,7 @@ router.post('/', (req, res) => {
         });
 });
 
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
     Task.update(req.body, {
         where: {
             id: req.params.id
@@ -80,7 +62,7 @@ router.put('/:id', (req, res) => {
         });
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
     Task.destroy({
         where: {
             id: req.params.id
