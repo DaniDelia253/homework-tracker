@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
 
 // GET User by ID
 router.get('/:id', (req, res) => {
-    User.findAll({
+    User.findOne({
         where: {
             id: req.params.id
         },
@@ -131,7 +131,7 @@ router.put('/:id', (req, res) => {
 });
 
 // DELETE /api/users/1
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
     User.destroy({
         where: {
             id: req.params.id
