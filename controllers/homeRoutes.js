@@ -6,7 +6,6 @@ router.get('/', (req, res) => {
         res.redirect('/login');
         return;
     }
-    console.log("LOOKING!!!! " + req.session)
     User.findAll({
         where: {
             id: req.session.user_id
