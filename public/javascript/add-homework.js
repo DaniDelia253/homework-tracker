@@ -4,7 +4,7 @@ async function newFormHandler(event) {
     const title = document.querySelector('input[name="homework-title"]').value;
     const homework_text = document.querySelector('input[name="homework-text"]').value;
   
-    const response = await fetch(`/api/posts`, {
+    const response = await fetch(`/api/homework`, {
       method: 'POST',
       body: JSON.stringify({
         title,
