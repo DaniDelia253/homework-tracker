@@ -1,4 +1,5 @@
 /* @import "./datepicker.min.css"; */
+
 .appHeader {
   padding: 15px;
   background-image: url("../images/background-image.png");
@@ -65,6 +66,20 @@ ul {
 
 .btn-gray:hover {
   color: white;
+}
+
+footer {
+  padding: 15px;
+  background-image: url("../images/background-image.png");
+  background-size: cover;
+  font-size: 20px;
+  color: rgb(39, 39, 39);
+  text-decoration: none;
+}
+
+footer a {
+  color: rgb(39, 39, 39);
+  text-decoration: none;
 }
 
 /* .btn-pic {
