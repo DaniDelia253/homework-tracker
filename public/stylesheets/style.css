@@ -68,6 +68,10 @@ ul {
   color: white;
 }
 
+main {
+  margin-bottom: 160px;
+}
+
 footer {
   padding: 15px;
   background-image: url("../images/background-image.png");
