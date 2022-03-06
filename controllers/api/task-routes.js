@@ -24,16 +24,16 @@ router.get('/:id', withAuth, (req, res) => {
             }
             res.json(dbTaskData);
         })
-            .catch(err => {
-                console.log(err);
-                res.status(500).json(err);
-            });
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
 });
 
 router.post('/', withAuth, (req, res) => {
     Task.create({
         task_text: req.body.task_text,
-        user_id: req.body.user_id,
+        user_id: req.session.user_id,
         homework_id: req.body.homework_id
     })
         .then(dbTaskData => res.json(dbTaskData))
@@ -75,10 +75,10 @@ router.delete('/:id', withAuth, (req, res) => {
             }
             res.json(dbTaskData);
         })
-            .catch(err => {
-                console.log(err);
-                res.status(500).json(err);
-            });
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
 });
 
 module.exports = router;
