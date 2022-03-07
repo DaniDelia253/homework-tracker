@@ -1,12 +1,11 @@
 const router = require('express').Router();
-const { User, Homework } = require('../models');
+const { User, Homework, Task } = require('../models');
 
 router.get('/', (req, res) => {
     if (!req.session.loggedIn) {
         res.redirect('/login');
         return;
     }
-    console.log("LOOKING!!!! " + req.session)
     User.findAll({
         where: {
             id: req.session.user_id
@@ -20,8 +19,14 @@ router.get('/', (req, res) => {
         include: [
             {
                 model: Homework,
-                attributes: ["id", "title", "homework_text", "due_date", "user_id"]
-            }
+                attributes: ["id", "title", "homework_text", "due_date", "user_id"],
+                include: [
+                    {
+                        model: Task,
+                        attributes: ["id", "task_text", "user_id", "homework_id"]
+                    }
+                ]
+            },
         ]
     })
         .then((dbUserData) => {

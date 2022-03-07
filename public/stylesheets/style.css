@@ -1,4 +1,5 @@
 /* @import "./datepicker.min.css"; */
+
 .appHeader {
   padding: 15px;
   background-image: url("../images/background-image.png");
@@ -56,3 +57,37 @@ ul {
   padding: 0; /* Remove padding */
   margin: 0; /* Remove margins */
 }
+
+.btn-gray {
+  background-color: rgb(80, 80, 80);
+  border: none;
+  color: white;
+}
+
+.btn-gray:hover {
+  color: white;
+}
+
+main {
+  margin-bottom: 160px;
+}
+
+footer {
+  padding: 15px;
+  background-image: url("../images/background-image.png");
+  background-size: cover;
+  font-size: 20px;
+  color: rgb(39, 39, 39);
+  text-decoration: none;
+}
+
+footer a {
+  color: rgb(39, 39, 39);
+  text-decoration: none;
+}
+
+/* .btn-pic {
+  background-image: url("../images/background-image.png");
+  background-size: cover;
+  border: none;
+} */

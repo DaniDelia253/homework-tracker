@@ -1,7 +1,8 @@
 const router = require('express').Router();
 const { User, Homework } = require('../../models/');
+const withAuth = require('../../utils/auth');
 
-router.get('/', (req, res) => {
+router.get('/', withAuth, (req, res) => {
     Homework.findAll({
         include: {
             model: User,
@@ -15,7 +16,7 @@ router.get('/', (req, res) => {
         });
 });
 
-router.get('/:id', (req, res) => {
+router.get('/:id', withAuth, (req, res) => {
     Homework.findOne({
         where: {
             id: req.params.id
@@ -38,12 +39,12 @@ router.get('/:id', (req, res) => {
         });
 });
 
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
     Homework.create({
-            title: req.body.title,
-            homework_text: req.body.homework_text,
-            due_date: req.body.due_date,
-            user_id: req.body.user_id
+        title: req.body.title,
+        homework_text: req.body.homework_text,
+        due_date: req.body.due_date,
+        user_id: req.session.user_id
     })
         .then(dbHomeworkData => res.json(dbHomeworkData))
         .catch(err => {
@@ -52,7 +53,7 @@ router.post('/', (req, res) => {
         });
 });
 
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
     Homework.update(req.body, {
         where: {
             id: req.params.id
@@ -71,7 +72,7 @@ router.put('/:id', (req, res) => {
         });
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
     Homework.destroy({
         where: {
             id: req.params.id

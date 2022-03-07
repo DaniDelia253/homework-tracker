@@ -1,20 +1,38 @@
-<div class="card text-center p-0 m-5">
+<div class="card col-10 text-center p-0 mx-auto my-5">
     <div class="card-header transform" data-bs-toggle="collapse" data-bs-target="#homework{{id}}">
         {{title}}
         <br>
         {{due_date}}
     </div>
-    <div class="card-body collapse" id="homework{{id}}">
+    <div class="card-body row collapse justify-content-between" id="homework{{id}}">
         <p class="card-text">
-        <ul class="task-list">
-            {{!-- figure out what this is going to be called --}}
-            {{#each task}}
-            <li>
-                {{!-- figure out what this is called --}}
-                {{>task task}}
-            </li>
-            {{/each}}
-        </ul>
+        <div class="col-1"></div>
+        <div class="col-10">
+
+            {{homework_text}}
+            <hr>
+        </div>
+        <div class="col-1"></div>
+
+        <div class="col-4 text-center">
+            <button class="btn btn-gray addTaskBtn" data-bs-toggle="modal" data-bs-target="#taskModal" data-id="{{id}}"
+                id="taskModalBtn">
+                <i class="fas fa-plus"></i>
+                Add tasks
+            </button>
+        </div>
+        <div class="col-8 text-start">
+            <p class="pb-1">Tasks:</p>
+            <ul class="task-list">
+                {{!-- figure out what this is going to be called --}}
+                {{#each comments as |task|}}
+                <li>
+                    {{!-- figure out what this is called --}}
+                    {{>task task}}
+                </li>
+                {{/each}}
+            </ul>
+        </div>
         </p>
         <div class="card-footer text-muted">
             <p id="markCompleteBtn"><i class="fas fa-check"></i>mark complete</p>
