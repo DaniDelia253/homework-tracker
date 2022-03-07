@@ -2,9 +2,9 @@
 
 This app will allow users to create a profile, and log in. When users are logged in, they will be able to add new homework assignments with associated due dates and to-do lists. The home page will display all upcoming assignments and show whether they are complete or incomplete. Users will also have the option to add additional assignments. When adding an assignment, choose the date and time that the assignment is due. When the user clicks on a specific assignment, they will see a to-do list, with options to add tasks, delete tasks, or mark them complete.
 
-![image](LoginPage_Screenshot Will Go Here)
-![image](createHW_screenshot Will Go Here)
-![image](addTask_screenshot WIll Go Here)
+![image](https://github.com/DaniDelia253/homework-tracker/blob/main/public/images/loginPage_screenshot.PNG)
+![image](https://github.com/DaniDelia253/homework-tracker/blob/main/public/images/createHW_screenshot.PNG)
+![image](https://github.com/DaniDelia253/homework-tracker/blob/main/public/images/addTask_screenshot.PNG)
 
 ## Table of Contents
 
