@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 async function deleteFormHandler(event, homeworkId) {
   event.preventDefault();
 
@@ -10,6 +11,22 @@ async function deleteFormHandler(event, homeworkId) {
     document.location.replace('/');
   } else {
     alert(response.statusText);
+=======
+async function deleteFormHandler(event) {
+  
+    const id = window.location.toString().split('/')[
+      window.location.toString().split('/').length - 1
+    ];
+    const response = await fetch(`/api/homework/${id}`, {
+      method: 'DELETE'
+    });
+  
+    if (response.ok) {
+      document.location.replace('/dashboard/');
+    } else {
+      alert(response.statusText);
+    }
+>>>>>>> dev/zane
   }
 }
 
