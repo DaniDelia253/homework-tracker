@@ -12,13 +12,12 @@ async function deleteTaskHandler(id) {
 }
 
 document.querySelectorAll('.delete-task-btn').forEach(item => {
-    item.addEventListener('click', findId)
-    return;
+    item.addEventListener('click', findId);
 });
 
 function findId(event) {
     if (event.target.dataset.id !== null) {
-        const taskId = event.target.dataset.id
+        const taskId = event.target.dataset.id;
         console.log(taskId);
         deleteTaskHandler(taskId);
     }
