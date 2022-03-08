@@ -20,7 +20,6 @@ document.querySelectorAll('.delete-task-btn').forEach(item => {
 function findId(event) {
     if (event.target.dataset.id !== null) {
         const taskId = event.target.dataset.id
-        console.log(taskId);
         deleteFormHandler(taskId);
     }
 }
