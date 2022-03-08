@@ -1,3 +1,4 @@
+{{#if thisUser.homework.length}}
 <ul class="homework-list">
     {{#each thisUser.homework as |homework|}}
     <li>
@@ -5,3 +6,9 @@
     </li>
     {{/each}}
 </ul>
+{{else}}
+<div class="text-center m-5">
+    <h3 class="p-1">You have no homework assignments yet.</h3>
+    <h3 class="p-1">Add one by clicking the <i class="fas fa-plus m-2"></i>button in the menu!</h3>
+</div>
+{{/if}}
