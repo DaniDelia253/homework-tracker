@@ -17,7 +17,7 @@ async function loginFormHandler(event) {
     if (response.ok) {
       document.location.replace('/');
     } else {
-      alert(response.statusText);
+      alert("That email or password does not exist.");
     }
   }
 }
@@ -44,7 +44,7 @@ async function signupFormHandler(event) {
       console.log("success!");
       document.location.replace('/');
     } else {
-      alert(response.statusText);
+      alert("There is already an account with that email.");
     }
   }
 }

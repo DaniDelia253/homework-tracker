@@ -1,11 +1,8 @@
 const router = require('express').Router();
 const { User, Homework, Task } = require('../models');
+const withAuth = require('../utils/auth');
 
-router.get('/', (req, res) => {
-    if (!req.session.loggedIn) {
-        res.redirect('/login');
-        return;
-    }
+router.get('/', withAuth, (req, res) => {
     User.findAll({
         where: {
             id: req.session.user_id
