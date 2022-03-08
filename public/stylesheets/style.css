@@ -95,3 +95,13 @@ footer a {
   color: rgb(59, 187, 0);
   text-decoration: none;
 }
+
+.edit-homework-btn {
+  color: rgb(58, 58, 58);
+  text-decoration: none;
+}
+
+.edit-homework-btn:hover {
+  color: rgb(59, 187, 0);
+  text-decoration: none;
+}
