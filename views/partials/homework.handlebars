@@ -1,5 +1,5 @@
 <div class="card col-10 text-center p-0 mx-auto my-5">
-    <div class="card-header transform" data-bs-toggle="collapse" data-bs-target="#homework{{id}}">
+    <div class="card-header transform homeworkTitle" data-bs-toggle="collapse" data-bs-target="#homework{{id}}">
         {{title}}
         <br>
         {{due_date}}
@@ -7,7 +7,7 @@
     <div class="card-body row collapse justify-content-between" id="homework{{id}}">
         <p class="card-text">
         <div class="col-1"></div>
-        <div class="col-10">
+        <div class="col-10 homeworkDescription">
 
             {{homework_text}}
             <hr>
@@ -22,8 +22,8 @@
             </button>
         </div>
         <div class="col-8 text-start">
-            <p class="pb-1">Tasks:</p>
-            <ul class="task-list">
+            <p class="pb-1 tasksTitle">Tasks:</p>
+            <ul class="task-list ps-4">
                 {{!-- figure out what this is going to be called --}}
                 {{#each comments as |task|}}
                 <li>
@@ -35,9 +35,16 @@
         </div>
         </p>
         <div class="card-footer text-muted">
-            <a id="complete-homework-btn" data-id="{{id}}" class="complete-homework-btn"><i
-                    class="fas fa-check"></i>Mark Complete</a>
-            <a id="edit-homework-btn" data-bs-toggle="modal" data-bs-target="#editHomeworkModal" data-id="{{id}}" class="edit-homework-btn"><i class="fa-solid fa-pen-to-square"></i>Edit Homework</a>
+            <a id="edit-homework-btn" data-bs-toggle="modal" data-bs-target="#editHomeworkModal" data-id="{{id}}"
+                class="edit-homework-btn">
+                <i class="fas fa-pen"></i>
+                Edit Homework
+            </a>
+            <a class="m-3">|</a>
+            <a id="complete-homework-btn" data-id="{{id}}" class="complete-homework-btn">
+                <i class="fas fa-check"></i>
+                Mark Complete
+            </a>
         </div>
     </div>
 </div>
