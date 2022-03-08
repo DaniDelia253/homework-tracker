@@ -17,7 +17,7 @@ This app will allow users to create a profile, and log in. When users are logged
 
 ## Links
 
-- [Deployed Heroku Link](https://)
+- [Deployed Heroku Link](https://quiet-island-37482.herokuapp.com/login)
 - [GitHub Repo](https://github.com/DaniDelia253/homework-tracker)
 
 ## Developers
@@ -30,7 +30,7 @@ This app will allow users to create a profile, and log in. When users are logged
 
 ## Installation Instructions
 
-No installation is necessary - see the deployed link at [Heroku](https://)
+No installation is necessary - see the deployed link at [Heroku](https://quiet-island-37482.herokuapp.com/login)
 
 ## Tech Stack
 
