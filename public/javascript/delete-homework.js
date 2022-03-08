@@ -1,5 +1,4 @@
 async function deleteFormHandler(event, homeworkId) {
-  event.preventDefault();
 
 
   const response = await fetch(`/api/homework/${homeworkId}`, {
