@@ -86,8 +86,12 @@ footer a {
   text-decoration: none;
 }
 
-/* .btn-pic {
-  background-image: url("../images/background-image.png");
-  background-size: cover;
-  border: none;
-} */
+.complete-homework-btn {
+  color: rgb(58, 58, 58);
+  text-decoration: none;
+}
+
+.complete-homework-btn:hover {
+  color: rgb(59, 187, 0);
+  text-decoration: none;
+}
