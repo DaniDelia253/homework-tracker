@@ -20,7 +20,8 @@ router.get('/', withAuth, (req, res) => {
                 include: [
                     {
                         model: Task,
-                        attributes: ["id", "task_text", "user_id", "homework_id"]
+                        attributes: ["id", "task_text", "user_id", "homework_id"],
+                        order: [['created_at', 'DESC']]
                     }
                 ]
             },

@@ -3,7 +3,9 @@ const { Homework, Task } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.get('/', withAuth, (req, res) => {
-    Task.findAll()
+    Task.findAll({
+        order: [['created_at', 'DESC']]
+    })
         .then(dbTaskData => res.json(dbTaskData))
         .catch(err => {
             console.log(err);
