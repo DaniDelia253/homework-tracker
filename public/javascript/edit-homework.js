@@ -1,26 +1,45 @@
+let id = "c"
+
+
+
+
 async function editFormHandler(event) {
-    event.preventDefault();
-  
-    const title = document.querySelector('input[name="homework-title"]').value.trim();
-    const id = window.location.toString().split('/')[
-      window.location.toString().split('/').length - 1
-    ];
-    const response = await fetch(`/api/posts/${id}`, {
-      method: 'PUT',
-      body: JSON.stringify({
-        title
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
-  
-    if (response.ok) {
-      document.location.replace('/dashboard/');
-    } else {
-      alert(response.statusText);
+  event.preventDefault();
+
+  const title = document.querySelector('input[id="editHomeworkTitle"]').value;
+  const homework_text = document.querySelector('input[id="editHomeworkText"]').value;
+  const due_date = document.querySelector('input[id="editDueDate"]').value;
+
+  const response = await fetch(`/api/homework/${id}`, {
+    method: 'PUT',
+    body: JSON.stringify({
+      title,
+      homework_text,
+      due_date
+    }),
+    headers: {
+      'Content-Type': 'application/json'
     }
+  });
+
+  if (response.ok) {
+    document.location.replace('/');
+  } else {
+    alert(response.statusText);
   }
-  
-  document.querySelector('.edit-homework-form').addEventListener('submit', editFormHandler);
-  
+}
+
+document.querySelectorAll('.edit-homework-btn').forEach(item => {
+  item.addEventListener('click', (event) => {
+    id = event.target.dataset.id
+    document.querySelector('input[id="editHomeworkTitle"]').value = event.target.dataset.title;
+    document.querySelector('input[id="editHomeworkText"]').value = event.target.dataset.homework_text;
+    document.querySelector('input[id="editDueDate"]').value = event.target.dataset.due_date
+  })
+});
+
+
+
+document.querySelector
+
+document.querySelector('.editHomeworkForm').addEventListener('submit', editFormHandler);

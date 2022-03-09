@@ -28,7 +28,8 @@ User.hasMany(Task, {
 });
 
 Homework.hasMany(Task, {
-    foreignKey: 'homework_id'
+    foreignKey: 'homework_id',
+    onDelete: 'SET NULL'
 });
 
 module.exports = { User, Homework, Task };

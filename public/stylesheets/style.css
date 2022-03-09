@@ -72,6 +72,26 @@ main {
   margin-bottom: 160px;
 }
 
+.tasksTitle,
+.homeworkDescription {
+  font-size: 18px;
+}
+
+.homeworkTitle {
+  font-size: 20px;
+}
+
+.delete-task-btn {
+  text-decoration: none;
+  border: none;
+  background-color: white;
+  font-size: 18px;
+}
+
+.task-list {
+  list-style-type: circle;
+}
+
 footer {
   padding: 15px;
   background-image: url("../images/background-image.png");
@@ -84,10 +104,20 @@ footer {
 footer a {
   color: rgb(39, 39, 39);
   text-decoration: none;
+  font-size: 18px;
 }
 
-/* .btn-pic {
-  background-image: url("../images/background-image.png");
-  background-size: cover;
-  border: none;
-} */
+.card-footer a {
+  color: rgb(58, 58, 58);
+  text-decoration: none;
+}
+
+.complete-homework-btn:hover {
+  color: rgb(59, 187, 0);
+  text-decoration: none;
+}
+
+.edit-homework-btn:hover {
+  color: rgb(255, 19, 19);
+  text-decoration: none;
+}
