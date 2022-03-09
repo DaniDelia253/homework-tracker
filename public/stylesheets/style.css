@@ -88,6 +88,12 @@ main {
   font-size: 18px;
 }
 
+.delete-task-btn:hover {
+  color: red;
+  text-shadow: rgb(58, 58, 58);
+  font-size: 19px;
+}
+
 .task-list {
   list-style-type: circle;
 }
