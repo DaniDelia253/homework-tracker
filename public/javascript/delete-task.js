@@ -1,7 +1,6 @@
 
-async function deleteFormHandler(id) {
-  
-    const response = await fetch(`/api/task/${id}`, {
+async function deleteTaskHandler(id) {
+      const response = await fetch(`/api/task/${id}`, {
       method: 'DELETE'
     });
   
@@ -13,15 +12,14 @@ async function deleteFormHandler(id) {
 }
 
 document.querySelectorAll('.delete-task-btn').forEach(item => {
-    item.addEventListener('click', findId)
-    return;
+    item.addEventListener('click', findId);
 });
 
 function findId(event) {
     if (event.target.dataset.id !== null) {
-        const taskId = event.target.dataset.id
+        const taskId = event.target.dataset.id;
         console.log(taskId);
-        deleteFormHandler(taskId);
+        deleteTaskHandler(taskId);
     }
 }
 
