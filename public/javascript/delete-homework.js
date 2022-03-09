@@ -1,13 +1,15 @@
-async function deleteFormHandler(id) {
-    const response = await fetch(`/api/homework/${id}`, {
-      method: 'DELETE'
-    });
-  
-    if (response.ok) {
-      document.location.replace('/');
-    } else {
-      alert(response.statusText);
-    }
+async function deleteFormHandler(event, homeworkId) {
+
+
+  const response = await fetch(`/api/homework/${homeworkId}`, {
+    method: 'DELETE'
+  });
+
+  if (response.ok) {
+    document.location.replace('/');
+  } else {
+    alert(response.statusText);
+  }
 }
 
 document.querySelectorAll('.complete-homework-btn').forEach(item => {
