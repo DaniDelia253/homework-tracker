@@ -36,7 +36,7 @@ No installation is necessary - see the deployed link at [Heroku](https://quiet-i
 
 - Languages: HTML, CSS, JavaScript
 
-- What libraries are used: [Vue2 Datepicker](https://www.npmjs.com/package/vue2-datepicker)
+- What libraries are used: [JS Datepicker](https://www.npmjs.com/package/js-datepicker)
 
 - Other: `Node.js`, `Express.js`, `Handlebars.js`, `MySQL`, `MySQL-Sequelize`, `Heroku`, `Bcrypt`
 
