@@ -17,7 +17,7 @@ This app will allow users to create a profile, and log in. When users are logged
 
 ## Links
 
-- [Deployed Heroku Link](https://quiet-island-37482.herokuapp.com/login)
+- [Deployed Heroku Link](https://quiet-island-37482.herokuapp.com/)
 - [GitHub Repo](https://github.com/DaniDelia253/homework-tracker)
 
 ## Developers
@@ -30,13 +30,13 @@ This app will allow users to create a profile, and log in. When users are logged
 
 ## Installation Instructions
 
-No installation is necessary - see the deployed link at [Heroku](https://quiet-island-37482.herokuapp.com/login)
+No installation is necessary - see the deployed link at [Heroku](https://quiet-island-37482.herokuapp.com/)
 
 ## Tech Stack
 
 - Languages: HTML, CSS, JavaScript
 
-- What libraries are used: [Vue2 Datepicker](https://www.npmjs.com/package/vue2-datepicker)
+- What libraries are used: [JS Datepicker](https://www.npmjs.com/package/js-datepicker)
 
 - Other: `Node.js`, `Express.js`, `Handlebars.js`, `MySQL`, `MySQL-Sequelize`, `Heroku`, `Bcrypt`
 
@@ -50,4 +50,7 @@ SO THAT I can complete homework on time.
 
 ## Stretch Goals
 
--
+- Add a page for "Completed" homework assignments, or pin them to the bottom of the homepage.
+- For a more user friendly page, update the homepage to display a calendar with the current month and year. Allow user to add a new homework assignment by calendar day.
+- Add an "Alert" function to inform users of homework assignments that are due soon.
+- Currently, when we add a task to a homework assignment, it collapses the homework assignment - fix to keep display open.
