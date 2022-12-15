@@ -14,7 +14,7 @@ if (process.env.PORT) {
 		process.env.DB_USER,
 		process.env.DB_PW,
 		{
-			host: "localhost",
+			host: process.env.RDS_HOSTNAME|| "localhost",
 			dialect: "mysql",
 			port: 3306,
 		}
