@@ -6,8 +6,8 @@ require("dotenv").config();
 let sequelize;
 
 // create connection to our database, pass in your MySQL information for username and password
-if (true) {
-	sequelize = new Sequelize("mysqldbprivateservice:3306");
+if (process.env.PORT) {
+	sequelize = new Sequelize(process.env.PORT);
 } else {
 	sequelize = new Sequelize(
 		process.env.DB_NAME,
